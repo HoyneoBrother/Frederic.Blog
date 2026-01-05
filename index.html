@@ -1,11 +1,240 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-  <title>Frederic Website </title>
-</head>
-<body>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 
-This is Frederic web site. It is under construction and will be available soon. This site will have my photo, handcraft, experience, AI generated movie, and so on. <br><b>Thanks for your patience.</b>
+    <title>Cerise Home Page</title>
+    <meta name="description"
+          content="Cerise is a mobile developer with architecture design, native and hybird development skill.">
+    <link rel="canonical" href="http://ceriseguo.azurewebsites.net/"/>
+
+    <link rel="author" href="https://www.facebook.com/cerise.guo.code"/>
+
+    <!--[if lt IE 9]>
+    <script src= "/_themes/cerise/js/html5.js"></script>
+    <![endif]-->
+
+    <script src="./client_js/libs/jquery/jquery-1.10.2.min.js"></script>
+
+    <!-- shared libraries below -->
+
+
+    <!-- shared libraries above -->
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5FJ9VB7MN"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-F5FJ9VB7MN');
+	</script>
+
+    <script>
+        console.log( "Loading in progress" );
+
+        $(function(){ $("head").load("sharedHeader.html") });
+    </script>
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div class="grid-container">
+
+        <div class="grid-25 mobile-grid-100 tablet-grid-100" id="indexbar">
+        </div>
+
+        <!-- Read body of page -->
+        <div class="grid-50 mobile-grid-100  tablet-grid-70 grid-parent" id="main">
+
+            <!-- ok here -->
+            <section id="body-section">
+                <article>
+                    <div class="block entry about-me" id="aboutme">
+                        <div id="loadingHome">
+                            <!--<img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />-->
+                            <h1>Loading ... just a few seconds</h1>
+                        </div>
+                    </div>					
+                </article>
+            </section>
+
+            <section id="Story-Section">
+                <div class="yearly-category-block story-block">
+                    <h1>My Blog</h1>
+                </div>
+            </section>
+			
+			<section id="Archive-Section">
+                <div class="yearly-category-block archive-block">
+                    <h1>Yearly Archives</h1>
+                    <div id="loadingArchive">
+                        <!--<img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />-->
+                        <h1>Loading ... just a few seconds</h1>
+                    </div>
+                </div>
+            </section>
+			
+			<section id="About-Section">
+			</section>
+			
+			<section id="Contact-Section">
+			</section>
+			
+			<section id="Photo-section">
+                <div class="yearly-category-block photo-block">
+                    <h1>My Photos</h1>
+
+                    <div id="Photo-Menu-wrapper" >
+
+                        <label for="photo-select" class="select">Photo Group:</label>
+                        <select id="photo-select">
+                            <option selected disabled hidden>Select a photo group here</option>
+                        </select>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="Experience-Section">
+                <div class="yearly-category-block experience-block">
+                    <h1>Experience Archives</h1>
+                </div>
+            </section>
+
+            <section id="Android-Section">
+                <div class="yearly-category-block android-block">
+                    <h1>Android Archives</h1>
+                </div>
+            </section>
+
+            <section id="iOS-Section">
+                <div class="yearly-category-block iOS-block">
+                    <h1>iOS Archives</h1>
+                </div>
+            </section>
+
+            <section id="Design-Section">
+                <div class="yearly-category-block design-block">
+                    <h1>Design Archives</h1>
+                </div>
+            </section>
+
+            <section id="Language-Section">
+                <div class="yearly-category-block language-block">
+                    <h1>Language Archives</h1>
+                </div>
+            </section>
+
+            <section id="Tool-Section">
+                <div class="yearly-category-block tool-block">
+                    <h1>Tool Archives</h1>
+                </div>
+            </section>
+
+            <section id="Engineering-Section">
+                <div class="yearly-category-block engineering-block">
+                    <h1>Software Engineering Archives</h1>
+                </div>
+            </section>
+
+            <section id="News-Section">
+                <div class="yearly-category-block news-block">
+                    <h1>Technical News Archives</h1>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- right side bar -->
+        <div class="grid-25 mobile-grid-100 tablet-grid-30 grid-parent" id="sidebar">
+        </div>
+
+        <div class="grid-50 prefix-25 suffix-25 mobile-grid-100 tablet-grid-70" id="footer">
+        </div>
+
+
+    </div>
+
+</div>
+<div id="dialog-Div" title="" style="display:none;">
+    <iframe id="the-dialog" width="400" height="500"></iframe>
+</div>
+
+<script src="/client_js/navigateHelper.js"></script>
+<script src="/client_js/indexNavigate.js"></script>
+<script src="/client_js/barNavigate.js"></script>
+
+<!--
+<link href="/_themes/cerise/css/cstyle.css" rel="stylesheet" media="all" />
+<link rel="stylesheet" href="/_add-ons/highlight/highlight/styles/github.css" />
+<link rel="stylesheet" href="/_themes/cerise/css/unsemantic-grid-base.css" />
+
+<link rel="stylesheet" href="/libs/font-awesome-4.6.3/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="/libs/jquery-ui-1.11.4/jquery-ui.min.css"/>
+-->
+
+<script>
+    console.log("index.html JS is loaded.")
+</script>
+
+<!-- Old before GA4 -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110142101-1"></script>-->
+<!--<script src="https://www.googletagmanager.com/gtag/js?id=UA-110142101-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110142101-1');
+</script>-->
+
+<script type="text/javascript">
+
+    $(document).ready(function(e) {
+
+        //test / simulate delay
+        /*
+        setTimeout( function(){
+            console.log("lazy loading the page for testing")
+            navHome( function(){
+                console.log("hide the loading text now.")
+                $('#loadingHome').hide();
+            });
+            initIndexLink();
+            initSidebarLink();
+        }, 0 );
+        */
+
+		navHome();
+        initIndexLink();
+        initSidebarLink();
+    });
+</script>
+
+<!-- shared library below -->
+
+
+<!-- shared library above-->
+
+<script src="/client_js/libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="/client_js/jquery.easing-1.3.js"></script>
+<script src="/client_js/cscript.js"></script>
+<script src="/client_js/libs/priorityscrolling/priorityscrolling.js"></script>
+
+<link rel="stylesheet" href="/client_js/css/jQueryMobile.Grid.css" /> <!-- FOR photo grid layout -->
+
+<style>
+    .ui-menu { width: 100px; }
+    .menu-ul { width: 150px; }
+</style>
+
 
 </body>
 </html>

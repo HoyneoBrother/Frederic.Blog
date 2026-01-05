@@ -1,0 +1,96 @@
+#priorityscroll{
+  position: relative; /* change to "fixed" if you want a fixed menu bar */
+	overflow: hidden;
+	z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+	background: #B00000; /* background of menu strip */
+}
+
+#priorityscroll ul{
+	margin: 0;
+	padding: 0;
+  display: flex;
+	/*font: bold 16px 'Bitter', sans-serif; /* #priorityscroll font (Bitter is Google font) */
+	text-transform: uppercase;
+	list-style-type: none;
+  position: relative;
+  min-width: 100%;
+  z-index: 1000;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	-webkit-transition: -webkit-transform 1s;
+	transition: transform 1s;
+}
+
+html.can-touch #priorityscroll ul{
+	overflow: auto;
+}
+
+
+#priorityscroll li{
+	margin: 0;
+	display: flex;
+	flex: none;
+	float: left; /* non flex browsers */
+}
+
+#priorityscroll li a{
+	display: block;
+  position: relative;
+	text-decoration: none;
+	margin: 0;
+	padding: 15px 20px; /*padding inside each link */
+	color: white;
+  outline: none;
+	border-right: 1px solid rgba(0,0,0,.2);
+	border-bottom: 8px solid rgba(0,0,0,.2);
+  background: #B00000; /*background of tabs (default state)*/
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+
+#priorityscroll li a:visited{
+	color: white;
+}
+
+#priorityscroll li a:hover, #priorityscroll li a:active{
+	border-bottom: 8px solid rgba(0,0,0,.3);
+	background: red; /*background of UI links for hover state  */
+}
+
+html.can-touch #priorityscroll li a:hover{ /* disable hover effect on touch screen input */
+	background: inherit;
+}
+
+
+#priorityscroll li input[type="text"]{ /* sample CSS for form elements inside LI */
+	background: #eee;
+	border: 1px solid black;
+	padding: 10px;
+	line-height: 1.5em;
+	padding-right: 5px;
+  align-self: center;
+	width: 170px;
+}
+
+
+/* ####### responsive layout CSS ####### */
+
+
+@media (max-width: 600px) { /* 2nd breaking point */
+
+	#priorityscroll a, #priorityscroll li a{
+		padding: 15px; /*padding inside each link */
+	}
+
+}
+
+@media (max-width: 480px) { /* 3rd breaking point */
+  #priorityscroll a, #priorityscroll li a{
+    font-size: 1em;
+  }
+}

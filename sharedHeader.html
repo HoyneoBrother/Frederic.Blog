@@ -1,0 +1,60 @@
+
+<!--
+<script src="/libs/jquery-ui-1.11.4/jquery-ui.min.js"/>
+
+<link href="/_themes/cerise/css/cstyle.css" rel="stylesheet" media="all" />
+<link rel="stylesheet" href="/_add-ons/highlight/highlight/styles/github.css" />
+
+<link rel="stylesheet" href="/_themes/cerise/css/unsemantic-grid-base.css" />
+
+-->
+
+<link href="/client_js/css/cstyle.css" rel="stylesheet" media="all" />
+<link href="/client_js/css/blogPage.css" rel="stylesheet" media="all" />
+<link rel="stylesheet" href="/client_js/css/github.css" />
+<link rel="stylesheet" href="/client_js/unsemantic-grid/unsemantic-grid-base.css" />
+
+<link rel="stylesheet" href="/client_js/libs/font-awesome-4.6.3/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="/client_js/libs/jquery-ui-1.11.4/jquery-ui.min.css"/>
+
+<noscript>
+    <link rel="stylesheet" href="/client_js/unsemantic-grid/unsemantic-grid-mobile.css" />
+</noscript>
+
+<!-- apply this css at last, so its style won't be overwriten.-->
+<link rel="stylesheet" href="/client_js/libs/priorityscrolling/priorityscrolling.css" />
+
+<script>
+    var ADAPT_CONFIG = {
+        path: '/client_js/unsemantic-grid/',
+        dynamic: true,
+        range: [
+            '0 to 767px = unsemantic-grid-mobile.css',
+            '767px to 1025px = unsemantic-grid-tablet.css',
+            '1025px = unsemantic-grid-desktop.css'
+        ]
+    };
+    console.log( "ADAPT_CONFIG : " + ADAPT_CONFIG );
+
+</script>
+
+<script src="/client_js/adapt.min.js"></script>
+<script>
+    console.log("adapt is loaded.")
+</script>
+
+<!--
+<link rel="stylesheet" href="/libs/jQueryMobile.Grid.css" /> <!-- FOR photo grid layout -->
+<!--
+<style>
+    .ui-menu { width: 100px; }
+    .menu-ul { width: 150px; }
+</style>
+
+<style>
+    .ui-menu { width: 100px; }
+   .menu-ul { width: 250px; }
+</style>
+-->
+
+<!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->

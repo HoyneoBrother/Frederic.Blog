@@ -1,0 +1,29 @@
+
+//Data base type string definition:
+//type string consists of 4 letters, maybe more in future
+//each letter can be Y or N, presents Yes and No.
+//The first letter : whether this blog item is related to project management
+//The second letter : whether this blog item is related to technical detail
+//The third letter : whether this blog item is related to solution or design
+//The fourth letter : whether this blog item is related to news
+//An example type string:  YNNY, indicates this blog item is related to project managment, and news.
+
+project:  ynnn
+technical:  nynn
+solution/design:   nnyn
+news:   nnny
+
+
+=========================
+
+exports.EXPERIENCE_TYPE = function(){ return 0x2;}    //decimal : 2   x
+exports.ANDROID_TYPE = function(){ return getAndroidType();}    //decimal : 4  x
+function getAndroidType(){  return 0x4;  }
+exports.IOS_TYPE = function() {return 0x8;}  //decimal : 8          x
+exports.PHOTO_PAGE_TYPE = function(){ return  0x8 | 0xF; }
+exports.DESIGN_TYPE = function(){return 0x10;}  //decimal : 16      x
+exports.LANGUAGE_TYPE= function(){ return 0x20;}  //decimal : 32
+exports.TOOLS_TYPE= function(){ return 0x40;}   //decimal : 64             x
+exports.ENGINEERING_TYPE= function(){ return 0x80;}  //decimal : 128     x
+exports.NEWS_TYPE= function(){ return 0x100;}   //decimal : 256  x
+exports.ALL_TYPES= function(){ return 0xFFF; }

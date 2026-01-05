@@ -1,0 +1,32 @@
+.blog-row .blog-paragraph {
+    list-style:disc inside;
+    padding:2px 2px 2px 2px; /* top right bottom left */
+    margin:3px;
+}
+
+.blog-row .blog-title {
+    color: #2E9286;
+    /*font-family: "adelle-n4","adelle",serif;*/
+    font-style: normal;
+    font-weight: 500;
+    /*font-size: 28px;*/
+    font-size: 1.1em;
+    letter-spacing: 0.02em;
+    line-height: 1.2em;
+    padding-top:0.35em;
+    padding-left:2px;
+    margin: 0 0 0 3px;
+}
+
+.blog-section-title {
+    color: #317b6a;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    /*font-size: 28px;*/
+    font-size: 1.5em;
+    /*letter-spacing: 0.02em;*/
+    line-height: 1.2em;
+    padding-top:0.35em;
+    margin: 0 0 0 3px;
+}

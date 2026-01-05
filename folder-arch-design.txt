@@ -1,0 +1,19 @@
+
+
+In the following txt file, it needs 0 length line to trigger appending operation.
+At the end of file, it needs a 0 length line too.
+/testWS.simple/articles/categories/Android/AndroidIndex.txt
+/testWS.simple/articles/categories/iOS/iOSIndex.txt
+
+
+===================
+
+Articles:
+/testWS.simple/articles/archiveIndex.txt
+--> /testWS.simple/articles/2016-Jun
+	--> /testWS.simple/articles/2016-Jun/index.txt
+		-->	/testWS.simple/articles/2016-Jun/dynamic-link-on-iOS.html
+			/testWS.simple/articles/2016-Jun/Conditional-Compilation-for-iOS.html
+			/testWS.simple/articles/2016-Jun/start-of-my-timeline.html
+
+

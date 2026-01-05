@@ -1,0 +1,71 @@
+table {
+    width: 250px;
+    display: table;
+    /*width: 60%;*/
+    border-collapse: collapse;
+    margin:50px auto;
+}
+
+/*
+th {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}*/
+
+/*
+.experienceDot {
+    display:list-item;
+    list-style:disc inside;
+    padding:0 0 0 0px;
+    margin:0;
+    width: 1pt;
+    vertical-align: middle;
+}*/
+.experienceTD p {
+    display:list-item;
+    list-style:disc inside;
+    padding:0 0 0 14px;
+    margin:0;
+    width: 15pt;
+}
+
+td, th {
+    /*padding: 10px;
+    /*border: 1px solid #EEEEEE;*/
+    text-align: left;
+    font-size: 18px;
+}
+
+.ClickRow {
+    padding: 10px;
+}
+
+.hidenRow tr td {
+    padding-bottom: 10px;
+    width: 59%;
+}
+
+.FirstCol {
+    width: 40px;
+}
+
+.FirstCol img {
+    width: 40px;
+}
+
+/*header with blue background*/
+.labels tr {
+    background-color: #ecf9f2;
+    font-weight: bold;
+    color: #fff;
+}
+
+.label tr td label {
+    display: block;
+}
+
+/*
+[data-toggle="toggle"] {
+    display: none;
+}*/

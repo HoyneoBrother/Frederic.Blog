@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+
+<head>
+    <!--<script src="/libs/sql/sql.js"></script>
+    <script src="/js/test.js"></script>-->
+    <script src="./client_js/libs/jquery/jquery-1.10.2.js"></script>
+    <script src="./client_js/libs/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <!--<script src="/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>-->
+    <link href="/client_js/css/cstyle.css" rel="stylesheet" media="all"/>
+
+    <link rel="stylesheet" href="./Hello.css"/>
+
+    <link rel="stylesheet" href="/client_js/css/jQueryMobile.Grid.css"/>
+
+</head>
+
+<body>
+
+<div>
+<table>
+    <thead>
+    <!--<tr>
+        <th>Regian</th>
+        <th>Q1 2010</th>
+        <th>Q2 2010</th>
+        <th>Q3 2010</th>
+        <th>Q4 2010</th>
+    </tr>-->
+    </thead>
+
+    <tbody>
+
+    <tbody class="labels">
+    <tr>
+        <td colspan="5" class = "ClickRow">
+            <label >Item 1 ~ 20 </label>
+            <!--
+            <label for="accounting">Accounting</label>
+            <input type="checkbox" name="accounting" id="accounting" data-toggle="toggle">-->
+        </td>
+    </tr>
+    </tbody>
+    <tbody class="hidenRow">
+    <tr>
+        <td class = "FirstCol"><img src="client_html/res/android-ico.png"/></td>
+        <td><p>$7,685.00</p></td>
+        <!--        <td>$3,544.00</td>
+                <td>$5,834.00</td>
+                <td>$10,583.00</td>-->
+    </tr>
+    <tr>
+        <td><p>Central America</p></td>
+        <td class="experienceTD"><div><p>$7,685.00</p></div></td>
+        <!--<td>$3,544.00</td>
+        <td>$5,834.00</td>
+        <td>$10,583.00</td>-->
+    </tr>
+    </tbody>
+    <tbody class="labels">
+    <tr>
+        <td colspan="5" class = "ClickRow">
+            <label >Item 21 ~ 40 </label>
+            <!--
+            <label for="management">Management</label>
+            <input type="checkbox" name="management" id="management" data-toggle="toggle">
+            -->
+        </td>
+    </tr>
+    </tbody>
+    <tbody class="hidenRow">
+    <tr>
+        <td>Australia</td>
+        <td class="experienceTD"><p></p></td>
+        <td><p>$7,685.00</p></td>
+        <!--<td>$3,544.00</td>
+        <td>$5,834.00</td>
+        <td>$10,583.00</td>-->
+    </tr>
+    <tr>
+        <td>Central America</td>
+        <td class="experienceTD"><p></p></td>
+        <td><p>$7,685.00</p></td>
+        <!--<td>$3,544.00</td>
+        <td>$5,834.00</td>
+        <td>$10,583.00</td>-->
+    </tr>
+    <tr>
+        <td>Europe</td>
+        <td class="experienceTD"><p></p></td>
+        <td><p>$7,685.00</p></td>
+        <!--<td>$3,544.00</td>
+        <td>$5,834.00</td>
+        <td>$10,583.00</td>-->
+    </tr>
+    <tr>
+        <td>Middle East</td>
+        <td class="experienceTD"><p></p></td>
+        <td><p>$7,685.00. W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. </p></td>
+        <!--<td>$3,544.00</td>
+        <td>$5,834.00</td>
+        <td>$10,583.00</td>-->
+    </tr>
+    </tbody>
+
+    </tbody>
+
+</table>
+</div>
+
+</body>
+<script>
+    $(document).ready(function () {
+
+        //$('[data-toggle="toggle"]').parent().next(".hide").toggle();
+        $('.hidenRow').hide();
+
+        $(".ClickRow").click( function () {
+            console.log( "clicked ClickRow");
+            $(this).parents().next('.hidenRow').toggle();
+        });
+/*
+        $('[data-toggle="toggle"]').change(function () {
+            $(this).parents().next('.hide').toggle();
+        });*/
+    });
+</script>
+
+</html>
