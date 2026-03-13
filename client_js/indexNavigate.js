@@ -1,7 +1,9 @@
 
+//import Chart from 'chart.js/auto'
+
 //var sql = require('./../sql.js');
 var storyLoaded = false;
-function navStory() {
+function navStory() {   
     showStoryPage();
 
     gtag('config', 'UA-110142101-1', {
@@ -9,11 +11,45 @@ function navStory() {
         'page_location': 'ceriseguo.azurewebsites.net',
         'page_path': '/Blog'
     });
+	
+	//new wather page
+	if (false == storyLoaded) {  
+				
+		storyLoaded = true;
+				
+		$.get("/page/blog.txt", function (data) {   //this is scrolling bar in story page - weather
+            console.log("blog.txt returned: "  + data )			
+			//const yValues = data.split(",");
+			
+			let dataFromServer = JSON.parse(data);
+			
+			let temperatureArray = [];
+			let furnaceHours = [];
+			
+			for (const dataPoint of dataFromServer) {
+				console.log(dataPoint);
+				
+				temperatureArray.push({x:dataPoint.date, y:parseInt(dataPoint.temperature, 10)});
+				furnaceHours.push({x:dataPoint.date, y:parseFloat(dataPoint.furnaceHour)});
+			}			
+			
+			//var temperatureArray = [{x:'2026-02-01',y:10},{x:'2026-02-15',y:15},{x:'2026-02-28',y:8}];
+				
+			var storySection = $(".story-block");
+			var $elem = $.parseHTML("<div><H3>2026 Winter Furnace Record</H3><br><canvas id=\"weatherChart\"></canvas></div>");
+			storySection.append( $elem ); 		
 
-    if (false == storyLoaded) {
+			const weatherCanvas = document.getElementById('weatherChart');
+			weatherChart = generateChart(weatherCanvas, "Outdoor Temperature v.s. Furnace Time", temperatureArray, furnaceHours );	
+			weatherChart.resize($("weahterChart").parent().width(),200); //<< useless, the width may be controlled by infrastructure automatically.
+		});
+	}	
+
+	//the following is the original story page
+    /*if (false == storyLoaded) {
         console.log("load Story Page");
 
-        $.get("/page/blog.txt", function (data) {
+        $.get("/page/blog.txt", function (data) {   //this is scrolling bar in story page - weather
             console.log("blog bar returned. " )
 
             var yearSection = $(".story-block");
@@ -38,7 +74,7 @@ function navStory() {
             //NOTE: update this every month. This hard coded value shall always point to latest blog month.
             getBlogPage( "201911")
         });
-    }
+    }*/
 }
 
 function getBlogPage( id ){
@@ -60,7 +96,7 @@ function getBlogPage( id ){
         }
 
         var yearSection = $(".story-block");
-        var $elem = $.parseHTML(data);
+        var $elem = $.parseHTML(data);   // weather replace this with new temperature code temperature Blog
         yearSection.append($elem);
     });
 }

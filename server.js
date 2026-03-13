@@ -9,7 +9,7 @@ var http = require('http');
 var fs = require("fs");
 var homePageHelper = require('./node_modules/homepage.js');
 var archivePageHelper = require('./node_modules/archivepage.js');
-const lessonPageHelper = require('./node_modules/lessonPage.js');
+const TemperaturePageHelper = require('./node_modules/TemperaturePage.js');
 var myHelper = require('./node_modules/helper.js');
 var emailHelper = require('./node_modules/emailHelper')
 
@@ -239,23 +239,24 @@ function sendArticleContent( response, ID ){
 	response.end();
 }
 
+//blog page
 function sendStoryPage( storyYearID, response, contentType){
     console.log("send lesson page: " + storyYearID  );
 
 	//This function generates original story page with icon, title, time stamp.
     //var page = storyPageHelper.getStoryPage();
 
-	var page = ""
-	if( storyYearID == "txt"){
-		page = lessonPageHelper.getLessonPage( lessonPageHelper.blogPageBar );
-	}else{
-		page = lessonPageHelper.getLessonPage( storyYearID );
-	}
+	var temperatureArray = TemperaturePageHelper.getTemperature();
+	//if( storyYearID == "txt"){
+	//	page = lessonPageHelper.getLessonPage( lessonPageHelper.blogPageBar );
+	//}else{
+	//	page = lessonPageHelper.getLessonPage( storyYearID );
+	//}
 
-    //console.log("lesson page: " + page );
+    console.log("temperatureArray before sending: " + temperatureArray.toString() );
 
     response.writeHead(200, {'Content-Type': contentType});
-    response.write( page );
+	response.write( temperatureArray.toString() );  // weather
     response.end();
 }
 
