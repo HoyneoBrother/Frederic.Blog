@@ -1,57 +1,208 @@
 [
 {
+
+	"date":"2026-01-15",
+	"temperature":"28",	
+	"furnaceHour":"10.03"
+},
+{
+	"date":"2026-01-16",
+	"temperature":"18.5",	
+	"furnaceHour":"9.02"
+},
+{
+	"date":"2026-01-17",
+	"temperature":"2.5",	
+	"furnaceHour":"11.3"
+},
+{
+	"date":"2026-01-18",
+	"temperature":"3",	
+	"furnaceHour":"13.13"
+},
+{
+	"date":"2026-01-19",
+	"temperature":"-2.5",	
+	"furnaceHour":"13.37"
+},
+{
+	"date":"2026-01-20",
+	"temperature":"11.5",	
+	"furnaceHour":"11.85"
+},
+{
+	"date":"2026-01-21",
+	"temperature":"12",	
+	"furnaceHour":"9.93"
+},
+{
+	"date":"2026-01-22",
+	"temperature":"-3.5",	
+	"furnaceHour":"13.78"
+},
+{
+	"date":"2026-01-23",
+	"temperature":"-14",	
+	"furnaceHour":"14.83"
+},
+{
+	"date":"2026-01-24",
+	"temperature":"-7.5",	
+	"furnaceHour":"13.17"
+},
+{
+	"date":"2026-01-25",
+	"temperature":"-6.5",	
+	"furnaceHour":"12.25"
+},
+{
+	"date":"2026-01-26",
+	"temperature":"3",	
+	"furnaceHour":"13.82"
+},
+{
+	"date":"2026-01-27",
+	"temperature":"3",
+	"furnaceHour":"10.83"
+},
+{
+	"date":"2026-01-28",
+	"temperature":"1",
+	"furnaceHour":"11.25"
+},
+{
+	"date":"2026-01-29",
+	"temperature":"2",
+	"furnaceHour":"10.62"
+},
+{
+	"date":"2026-01-30",
+	"temperature":"-8",
+	"furnaceHour":"10.67"
+},
+{
+	"date":"2026-01-31",
+	"temperature":"-9",	
+	"furnaceHour":"9.37"
+},
+{
+	"date":"2026-02-01",
+	"temperature":"-6",	
+	"furnaceHour":"8.22"
+},
+{
+	"date":"2026-02-02",
+	"temperature":"-11",	
+	"furnaceHour":"8.02"
+},
+{
+	"date":"2026-02-03",
+	"temperature":"-12",	
+	"furnaceHour":"8.72"
+},
+{
+	"date":"2026-02-04",
+	"temperature":"-6",	
+	"furnaceHour":"8.73"
+},
+{
+	"date":"2026-02-05",
+	"temperature":"0.5",	
+	"furnaceHour":"5.53"
+},
+{
+	"date":"2026-02-06",
+	"temperature":"-6",	
+	"furnaceHour":"4"
+},
+{
+	"date":"2026-02-07",
+	"temperature":"-4.5",	
+	"furnaceHour":"8.5"
+},
+{
+	"date":"2026-02-08",
+	"temperature":"-1",	
+	"furnaceHour":"4.53"
+},
+{
+	"date":"2026-02-09",
+	"temperature":"-2.5",	
+	"furnaceHour":"6.08"
+},
+{
+	"date":"2026-02-10",
+	"temperature":"-1.5",	
+	"furnaceHour":"5.63"
+},
+{
+	"date":"2026-02-11",
+	"temperature":"-2.5",	
+	"furnaceHour":"5.93"
+},
+{
+	"date":"2026-02-12",
+	"temperature":"2",	
+	"furnaceHour":"3.05"
+},
+{
+	"date":"2026-02-13",
+	"temperature":"1.5",	
+	"furnaceHour":"2.62"
+},
+{
+	"date":"2026-02-14",
+	"temperature":"2.5",	
+	"furnaceHour":"2.13"
+},
+{
+	"date":"2026-02-15",
+	"temperature":"4",	
+	"furnaceHour":"1.72"
+},
+{
+	"date":"2026-02-16",
+	"temperature":"4.5",	
+	"furnaceHour":"1.3"
+},
+{
+	"date":"2026-02-17",
+	"temperature":"5",	
+	"furnaceHour":"2.32"
+},
+{
+	"date":"2026-02-18",
+	"temperature":"2",	
+	"furnaceHour":"6.02"
+},
+{
+	"date":"2026-02-19",
+	"temperature":"-2",	
+	"furnaceHour":"5.83"
+},
+{
+	"date":"2026-02-20",
+	"temperature":"-6",	
+	"furnaceHour":"7.2"
+},
+{
+	"date":"2026-02-20",
+	"temperature":"-6",	
+	"furnaceHour":"7.2"
+},
+{
 	"date":"2026-02-21",
-	"temperature":"21",
-	"furnaceHour":"4.3"
+	"temperature":"-8",	
+	"furnaceHour":"7.75"
 },
 {
 	"date":"2026-02-22",
-	"temperature":"11",	
-	"furnaceHour":"3.5"
+	"temperature":"-11.5",	
+	"furnaceHour":"11.38"
 },
 {
 	"date":"2026-02-23",
-	"temperature":"28",	
-	"furnaceHour":"3.1"	
-},
-{
-	"date":"2026-02-24",
-	"temperature":"19",	
-	"furnaceHour":"4.2"	
-},
-{
-	"date":"2026-02-25",
-	"temperature":"19",	
-	"furnaceHour":"3.9"	
-},
-{
-	"date":"2026-02-26",
-	"temperature":"21",	
-	"furnaceHour":"4.1"	
-},
-{
-	"date":"2026-02-27",
-	"temperature":"10",	
-	"furnaceHour":"3.2"	
-},
-{
-	"date":"2026-02-28",
-	"temperature":"12",	
-	"furnaceHour":"4.5"
-},
-{
-	"date":"2026-03-01",
-	"temperature":"13",	
-	"furnaceHour":"3.9"	
-},
-{
-	"date":"2026-03-02",
-	"temperature":"16",	
-	"furnaceHour":"3.7"	
-},
-{
-	"date":"2026-03-03",
-	"temperature":"17",	
-	"furnaceHour":"3.0"	
+	"temperature":"-7",	
+	"furnaceHour":"7.85"
 }
 ]

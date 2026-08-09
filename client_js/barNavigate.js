@@ -4,7 +4,12 @@ $("#photo-select").change(function(){
     var selected = $("#photo-select option:selected");
     var dataValue = $("#photo-select option:selected")[0].getAttribute("data");
     console.log("selected photo: " + dataValue);
+	
+	//Frederic website
+	dataValue = 1444;
 
+	openOnePhotoPage(dataValue);
+	/*
     gtag('config', 'UA-110142101-1', {
         'page_title': 'PhotoPage',
         'page_location': 'ceriseguo.azurewebsites.net',
@@ -29,8 +34,37 @@ $("#photo-select").change(function(){
 
          loadPlaceholder(initWidth);
         
-    });
+    });*/
 });
+
+function openOnePhotoPage( pageID ) {
+	
+    gtag('config', 'UA-110142101-1', {
+        'page_title': 'PhotoPage',
+        'page_location': 'ceriseguo.azurewebsites.net',
+        'page_path': '/PhotoSelected'
+    });
+
+    const PhotoPageURL = "/articles/photo/";
+    $.get(PhotoPageURL + pageID + ".photo", function (data) {
+
+        //remove existing photos first
+        $(".photo-page").remove();
+
+         console.log("loaded Photo Page : " + data);
+        
+        var photoSection = $(".photo-block");
+         var $elem = $.parseHTML(data);
+         photoSection.append($elem);
+
+         const imageMargin = 10;
+         var initWidth = $('#Photo0').width() - imageMargin;
+         console.log( "Init width = " + initWidth );
+
+         loadPlaceholder(initWidth);
+        
+    });
+}
 
 var photoLoaded = false;
 function navPhoto() {
@@ -55,6 +89,7 @@ function navPhoto() {
         console.log(" will load Photo Page");
         photoLoaded = true;
         
+		/*
         $.get("/articles/photoIndex.txt", function (data) {
 
             $( function() {
@@ -63,7 +98,10 @@ function navPhoto() {
                 var $indexElement = $.parseHTML(data);
                 $("#photo-select").append($indexElement);
             } );
-        })
+        })*/
+		
+		dataValue = 1444; //FredericDrawing
+		openOnePhotoPage( dataValue );
     }
 }
 
