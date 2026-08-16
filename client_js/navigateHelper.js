@@ -51,34 +51,53 @@ function loadPicture( imageIndex, totalPhotoCount, initSinglePhotoWidth ) {
         console.log(  initSinglePhotoWidth + " , " + actualWidth + " , " + downloadingImage.height  );
 
         console.log( "image count = " + imageIndex );
-        //$('#Photo' + imageIndex).html("<a href=\"" + photoPathes[imageIndex] + "\">dlink</a>");
         $('#Photo' + imageIndex).append(downloadingImage);
-        //$('#Photo' + imageIndex).append("<a href=\"" + photoPathes[imageIndex] + "\">&nbsp&nbsp&nbspdownload link</a>");
 
+		//Create and hook large image click callback
         var imageID = "img" + imageIndex;
         var string1 = "<a href=\"#\" id=\"";
-        var string2 = "\">&nbsp&nbsp&nbspopen full size</a>";
+        var string2 = "\">&nbspFull Picture</a>";
 
+		//example : <a href="#" id="img0">&nbsp;&nbsp;&nbsp;open full size</a>
         var $elem = $.parseHTML( string1 + imageID + string2 );
 
-        //$('#Photo' + imageIndex).append("<a href=\"#\" class=\"abcd\">&nbsp&nbsp&nbspopen full size</a>");
         $('#Photo' + imageIndex).append($elem );
-
-        /*
-        $elem.click(function(event) {
-         event.preventDefault();
-         event.stopPropagation();
-         window.open(photoPathes[imageIndex], '_blank');
-         })*/
 
         var imgSelector = "#" + imageID;
         $(imgSelector).click(function(event) {
+			
+			console.log( "open photo in new window " + imgSelector );
+			
             event.preventDefault();
             event.stopPropagation();
             window.open(photoPathes[imageIndex], '_blank');
+			//example photo path : ./photos/FredericDrawing/2025-11-22FredericLeaf.jpg
+			console.log( "photoPath : " + photoPathes[imageIndex] );
         })
+		
+		//Create and hook mp4 video click callback
+        var mp4ID = "img" + imageIndex + "mkv";
+        var string3 = "&nbsp&nbsp&nbsp <a href=\"#\" id=\"";
+        var string4 = "\">&nbsp Record</a>";
 
-        //imageLoadCount++;
+        var $mp4Elem = $.parseHTML( string3 + mp4ID + string4 );
+
+        $('#Photo' + imageIndex).append($mp4Elem);
+		
+		
+		var mp4Selector = "#" + mp4ID;
+        $(mp4Selector).click(function(event) {
+			
+			console.log( "open mkv in new window " + mp4Selector );
+			
+            event.preventDefault();
+            event.stopPropagation();			
+			//var mp4Path = photoPathes[imageIndex].replace(".jpg", ".mkv");
+			var mp4Path = photoPathes[imageIndex].replace(".jpg", ".mp4");
+			
+			console.log( "open mkv path : " + mp4Path  );
+			window.open( mp4Path, '_blank'); 			
+        })
 
         if( imageIndex < (totalPhotoCount-1) ){
             loadPicture(imageIndex+1, totalPhotoCount, initSinglePhotoWidth)

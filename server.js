@@ -97,14 +97,25 @@ http.createServer(function(request, response) {
 	}
 	//Note: file name may contain bracket ( or ).
 	else if(/^\/[0-9a-zA-Z_\(\)\/\.-]*\.(jpg|jpeg|JPG)$/.test(pathString)){
+		console.log("got jpg request for : " + pathString + ", " +pathString.substring(1) );
 		sendFileContent(response, pathString.substring(1), "image/jpg");
 	}
 	else if(/^\/[0-9a-zA-Z_\/\.-]*\.(png)$/.test(pathString)){
+		console.log("got png request for : " + pathString + ", " +pathString.substring(1) );
 		sendFileContent(response, pathString.substring(1), "image/png");
 	}	
-	else if(/^\/[0-9a-zA-Z_\/\.-]*\.(gif)$/.test(pathString)){		
-		sendFileContent(response, pathString.substring(1), "image/gif");
+	else if(/^\/[0-9a-zA-Z_\/\.-]*\.(mkv)$/.test(pathString)){		
+		console.log("got mkv request for : " + pathString + ", " +pathString.substring(1) );
+		sendFileContent(response, pathString.substring(1), "video/matroska");
 	}
+	else if(/^\/[0-9a-zA-Z_\/\.-]*\.(mp4)$/.test(pathString)){		
+		console.log("got mkv request for : " + pathString + ", " +pathString.substring(1) );		
+		sendFileContent(response, pathString.substring(1), "video/mp4");
+	}	
+	else if(/^\/[0-9a-zA-Z_\/\.-]*\.(gif)$/.test(pathString)){		
+		console.log("got gif request for : " + pathString + ", " +pathString.substring(1) );
+		sendFileContent(response, pathString.substring(1), "image/gif");
+	}	
 	else{
 
 		const resPrefix = "resource/";
